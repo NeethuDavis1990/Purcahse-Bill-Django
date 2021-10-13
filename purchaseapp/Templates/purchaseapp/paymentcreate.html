@@ -1,0 +1,17 @@
+{% extends 'purchaseapp/base.html'%}
+{% block body_content%}
+<form method="POST">
+
+    {%csrf_token%}
+   <center>
+      {{paymentcreate}}
+     
+    
+<input  type="submit" value="Save"/>
+</center>
+
+</form>
+
+
+
+{%endblock%}

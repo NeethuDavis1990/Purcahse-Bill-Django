@@ -1,0 +1,24 @@
+#id_State,#id_Supplier{
+    width:130px;
+}
+#id_Remarks{
+    width:350px;
+}
+input{
+    width: 80px;
+}
+#Addmorebtnid{
+    width: 100px;
+}
+#id_InvoiceNo,#id_InvoiceDate,#id_Type{
+    width: 180px;
+}
+#idtaxableamt,#idcgstamt,#idsgstamt,#idigstamt,#idsubtotalamt,#iddiscountamt,#idgtotalamt{
+    width: 150px;
+}
+#id_Paymode{
+    width: 150px;
+}
+#id_PayeeName,#id_CardNo,#id_ExpDate,#id_Code{
+    width:150px;
+}

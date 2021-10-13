@@ -1,0 +1,35 @@
+{%extends 'purchaseapp/base.html'%}
+{%block body_content%}
+<form method="GET">
+{%csrf_token%}
+<center>
+    <table class="table table-bordered", style="background-color: rgb(188, 235, 243)"
+    font-family="sans-serif" >
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>ProductCode</th>
+                <th>BaseUOM</th>
+                <th>ReorderLevel</th>
+                <th>Category</th>
+                <th>Edit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in productlist%}
+            <tr>
+                <td>{{item.ProductName}}</td>
+                <td>{{item.ProductCode}}</td>
+                <td>{{item.BaseUOM.UomCode}}</td>
+                <td>{{item.ReorderLevel}}</td>
+                <td>{{item.Category}}</td>
+                <td><a href="{% url 'Producteditview' id=item.ProductId %}">Edit</a></td>
+            
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</center>
+</form>
+{%endblock%}

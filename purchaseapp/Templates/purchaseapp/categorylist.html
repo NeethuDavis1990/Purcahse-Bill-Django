@@ -1,0 +1,32 @@
+{%extends 'purchaseapp/base.html'%}
+{%block body_content%}
+<form method="GET">
+{%csrf_token%}
+<center>
+    <table class="table table-bordered", style="background-color: rgb(188, 235, 243)"
+    font-family="sans-serif" >
+        <thead>
+            <tr>
+                
+                <th>CategoryName</th>
+                <th>HSNCode</th>
+                <th>TaxPercentage</th>
+                <th>Edit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in catlist%}
+            <tr>
+                <td>{{item.CategoryName}}</td>
+                <td>{{item.HSNCode}}</td>
+                <td>{{item.TaxPercentage}}</td>
+                <td><a href="{% url 'Categoryeditview' id=item.Id %}">Edit</a></td>
+            
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</center>
+</form>
+{%endblock%}

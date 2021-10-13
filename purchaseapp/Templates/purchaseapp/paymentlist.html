@@ -1,0 +1,40 @@
+{%extends 'purchaseapp/base.html'%}
+{%block body_content%}
+<form method="GET">
+{%csrf_token%}
+<center>
+    <table class="table table-bordered", style="background-color: rgb(188, 235, 243)"
+    font-family="sans-serif" >
+        <thead>
+            <tr>
+                
+                <th>PaymentMode</th>
+                <th>PayeeName </th>
+                <th>CardNo</th>
+                <th>ExpDate</th>
+                <th>Code </th>
+                <th>BankBranch</th>
+                <th>MobileNo</th>
+                <th>Edit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in paymentlist%}
+            <tr>
+                <td>{{item.PaymentMode}}</td>
+                <td>{{item.PayeeName}}</td>
+                <td>{{item.CardNo}}</td>
+                <td>{{item.ExpDate}}</td>
+                <td>{{item.Code}}</td>
+                <td>{{item.BankBranch}}</td>
+                <td>{{item.MobileNo}}</td>
+                <td><a href="{% url 'Paymenteditview' id=item.Id %}">Edit</a></td>
+            
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</center>
+</form>
+{%endblock%}

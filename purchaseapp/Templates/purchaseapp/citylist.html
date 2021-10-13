@@ -1,0 +1,30 @@
+{%extends 'purchaseapp/base.html'%}
+{%block body_content%}
+<form method="GET">
+{%csrf_token%}
+<center>
+    <table class="table table-bordered", style="background-color: rgb(188, 235, 243)"
+    font-family="sans-serif" >
+        <thead>
+            <tr>
+                
+                <th>City</th>
+                <th>State </th>
+                <th>Edit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in citylist%}
+            <tr>
+                <td>{{item.CityName}}</td>
+                <td>{{item.State}}</td>
+                <td><a href="{% url 'Cityeditview' id=item.CityId %}">Edit</a></td>
+            
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</center>
+</form>
+{%endblock%}

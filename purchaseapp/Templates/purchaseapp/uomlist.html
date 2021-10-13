@@ -1,0 +1,29 @@
+{%extends 'purchaseapp/base.html'%}
+{%block body_content%}
+<form method="GET">
+{%csrf_token%}
+<center>
+    <table class="table table-bordered", style="background-color: rgb(188, 235, 243)"
+    font-family="sans-serif" >
+        <thead>
+            <tr>
+                <th>Uomtype</th>
+                <th>UomCode</th>
+                <th>Edit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in uomlist%}
+            <tr>
+                <td>{{item.Uomtype}}</td>
+                <td>{{item.UomCode}}</td>
+                <td><a href="{% url 'UOMeditview' id=item.Id %}">Edit</a></td>
+            
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</center>
+</form>
+{%endblock%}

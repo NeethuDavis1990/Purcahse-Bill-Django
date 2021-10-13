@@ -1,0 +1,38 @@
+{%extends 'purchaseapp/base.html'%}
+{%block body_content%}
+<form method="GET">
+{%csrf_token%}
+<center>
+    <table class="table table-bordered", style="background-color: rgb(188, 235, 243)"
+    font-family="sans-serif" >
+        <thead>
+            <tr>
+                
+                <th>Party</th>
+                <th>GSTNNo </th>
+                <th>State</th>
+                <th>City</th>
+                <th>Shop </th>
+                <th>PartyType</th>
+                <th>Edit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in partylist%}
+            <tr>
+                <td>{{item.PartyName}}</td>
+                <td>{{item.GSTNNo}}</td>
+                <td>{{item.State}}</td>
+                <td>{{item.City}}</td>
+                <td>{{item.Shop}}</td>
+                <td>{{item.PartyType}}</td>
+                <td><a href="{% url 'Partyeditview' id=item.PartyId %}">Edit</a></td>
+            
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</center>
+</form>
+{%endblock%}

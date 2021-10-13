@@ -1,0 +1,113 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+   integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+   integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+   
+
+
+
+<link rel='stylesheet' type='text/css' href="{% static 'purchaseapp/css/mycss.css' %}" />
+<script type='text/javascript' src="{% static 'purchaseapp/js/myjs.js' %}"></script>
+
+  </head>
+
+<body>
+    <h1>Party App</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Select</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Drop down 1
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            
+                <a class="dropdown-item" href="{%url 'Statecreate_view'%}">State Create</a>
+                <a class="dropdown-item" href="{%url 'Satelistview'%}">State List</a>
+                <a class="dropdown-item" href="{%url 'Citycreateview'%}">City Create</a>
+                <a class="dropdown-item" href="{%url 'Citylistview'%}">City List</a>
+                
+                <a class="dropdown-item" href="{%url 'Partyviewcreate'%}">Supplier Create</a>
+                <a class="dropdown-item" href="{%url 'Partylistview'%}">Supplier List</a>
+                
+                <a class="dropdown-item" href="{%url 'Categorycreateview'%}">Category Create</a>
+
+                <a class="dropdown-item" href="{%url 'Categorylistview'%}">Category List</a>
+                <a class="dropdown-item" href="{%url 'UOMcreateview'%}">UOM create</a>
+
+                <a class="dropdown-item" href="{%url 'UOMlistview'%}">UOM List</a>
+                <a class="dropdown-item" href="{%url 'Productcreateview'%}">Product create</a>
+
+                
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Drop Down 2
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                
+
+                
+                        <a class="dropdown-item" href="{%url 'Productlistview'%}">Product List</a>
+                        <a class="dropdown-item" href="{%url 'Paymentmodecreateview'%}">Payment Mode</a>
+                        
+                        
+                        <a class="dropdown-item" href="{%url 'PaymentDetailscreateview'%}">PaymentDetails create</a>
+                        
+                        <a class="dropdown-item" href="{%url 'Paymentlistview'%}">PaymentDetails List</a>
+                        <a class="dropdown-item" href="{%url 'GSTwiseSummarycreateview'%}">GSTwiseSummary create</a>
+                        <a class="dropdown-item" href="{%url 'GSTwiseSummarylistview'%}">GSTwiseSummary List</a>
+                        
+                        <a class="dropdown-item" href="{%url 'StockTablecreateview'%}">StockTable create</a>
+                        <a class="dropdown-item" href="{%url 'StockTablelistview'%}">StockTable List</a>
+
+                        
+              
+                        <a class="dropdown-item" href="{%url 'Purchasebillcreateinlineform'%}">Purchase Bill Create</a> 
+
+                
+
+                
+                
+
+                
+                
+                
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    
+
+{%block body_content%}
+{%endblock%}
+</body>
+</html>
